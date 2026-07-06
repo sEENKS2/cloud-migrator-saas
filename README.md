@@ -50,9 +50,21 @@ Tener instalado Linux, Go, Node.js y Docker.
 ```bash
 cd backend
 docker compose up -d
+```
 
 ### 2. Generar el set de datos masivos
-
+```bash
 go run cmd/generator/main.go
+```
 
-### 
+### 3. Iniciar el servidor Backend
+```bash
+go run cmd/migrator/main.go
+```
+
+### 4. Levantar la interfaz Frontend
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
