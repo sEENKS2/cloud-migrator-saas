@@ -1,0 +1,21 @@
+# Excluir dependencias de Node
+frontend/node_modules/
+frontend/dist/
+
+# Excluir ejecutables de Go y archivos temporales
+backend/backend
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# EXCLUIR SET DE DATOS MASIVOS Y LOGS (Son muy pesados para GitHub)
+backend/usuarios_masivos.json
+backend/errores_migracion.log
+
+# carpetas ocultas de entorno o editores
+.JSX/
+.vscode/
+.idea/
+.DS_Store

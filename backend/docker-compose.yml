@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: migrator_postgres
+    environment:
+      POSTGRES_USER: migrator_user
+      POSTGRES_PASSWORD: migrator_password
+      POSTGRES_DB: cloud_migrator_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
